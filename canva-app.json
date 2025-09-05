@@ -11,7 +11,13 @@
         "name": "canva:design:content:write",
         "type": "mandatory"
       }
-    ]
+    ],
+    "external_oauth": {
+      "provider": "contentful",
+      "authorization_url": "https://be.contentful.com/oauth/authorize",
+      "token_url": "https://be.contentful.com/oauth/token",
+      "scopes": ["content_management_manage"]
+    }
   },
   "intent": {
     "data_connector": {

@@ -99,7 +99,7 @@ export const Login = () => {
               <FormattedMessage {...loginMessages.setupInstructions} />
             </Text>
             <Button variant="primary" onClick={authorize}>
-              {intl.formatMessage(loginMessages.signIntoCanva)}
+              {intl.formatMessage(loginMessages.signIntoContentful)}
             </Button>
           </Rows>
         )}
@@ -130,7 +130,7 @@ const loginMessages = defineMessages({
   },
   exampleDemonstration: {
     defaultMessage:
-      "This example demonstrates how to do this with the Canva Connect API.",
+      "This example demonstrates how to integrate with Contentful using OAuth.",
     description: "Body text shown when the user is prompted to sign in",
   },
   setupInstructions: {
@@ -138,8 +138,8 @@ const loginMessages = defineMessages({
       "For set up instructions please see the README.md in the root folder.",
     description: "Body text shown when the user is prompted to sign in",
   },
-  signIntoCanva: {
-    defaultMessage: "Sign into Canva",
-    description: "Button text for initiating Canva authentication",
+  signIntoContentful: {
+    defaultMessage: "Sign into Contentful",
+    description: "Button text for initiating Contentful authentication",
   },
 });

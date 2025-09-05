@@ -98,7 +98,6 @@ export const ContextProvider = ({
     try {
       setAccessToken(undefined);
       await oauth.deauthorize();
-      setAccessToken(null);
     } catch (error) {
       setAppError(error instanceof Error ? error.message : "Logout failed");
     }

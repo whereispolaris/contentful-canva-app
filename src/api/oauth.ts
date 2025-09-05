@@ -1,8 +1,8 @@
 /**
- * The scopes to request as part of the OAuth flow.
- * These scopes are required to read the user's designs and brand templates.
+ * The scopes to request as part of the OAuth flow with Contentful.
+ * These scopes are required to access Contentful data.
  *
- * @see https://www.canva.dev/docs/apps/authenticating-users/oauth/#overview - for more information about using the @canva/user package to support OAuth login.
- * @see https://www.canva.dev/docs/connect/appendix/scopes/ - for a full list of Canva Connect API scopes.
+ * @see https://www.canva.dev/docs/apps/authenticating-users/oauth/#overview - for more information about using external OAuth.
+ * @see https://www.contentful.com/developers/docs/references/authentication/#scopes - for Contentful OAuth scopes.
  */
-export const scope = new Set(["design:meta:read", "brandtemplate:meta:read"]);
+export const scope = new Set(["content_management_manage"]);

@@ -5,9 +5,8 @@ import type {
   RenderSelectionUiRequest,
 } from "@canva/intents/data";
 import { prepareDataConnector } from "@canva/intents/data";
-import { auth } from "@canva/user";
 import { createRoot } from "react-dom/client";
-import { buildDataTableResult, scope } from "./api";
+import { buildDataTableResult } from "./api";
 import { App } from "./app";
 import "@canva/app-ui-kit/styles.css";
 
@@ -27,9 +26,9 @@ prepareDataConnector({
   getDataTable: async (
     params: GetDataTableRequest,
   ): Promise<GetDataTableResponse> => {
-    const oauth = auth.initOauth();
-    const token = await oauth.getAccessToken({ scope });
-    return buildDataTableResult(params, token?.token);
+    // For external OAuth, the token will be retrieved by the data source handlers
+    // when they need to make API calls to Contentful
+    return buildDataTableResult(params, undefined);
   },
 
   /**
